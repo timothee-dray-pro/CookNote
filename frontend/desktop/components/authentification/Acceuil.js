@@ -1,6 +1,6 @@
 import styles from '../../styles/authentification/Acceuil.module.css';
-import Login from './login';
-import Signin from './signin';
+import Login from './Login';
+import Signin from './Signin';
 import Image from 'next/image';
 
 function Home() {
