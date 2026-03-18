@@ -1,0 +1,153 @@
+.body {
+    padding-bottom: 20vh;
+}
+
+.linkAcceuil {
+    margin: clamp(10px, 1.5vw, 15px);
+    cursor: pointer;
+    background-color: #ff6a00;
+    padding: clamp(8px, 1vw, 10px) clamp(16px, 1.5vw, 20px);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: max-content;
+    position: fixed;
+}
+
+.linkAcceuil:hover {
+    background-color: #ce4e0d;
+    transition: 0.2s;
+}
+
+.linkAcceuil:active {
+    background-color: #5f2102;
+}
+
+.centerTitre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 1.5em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    font-style: bolder;
+    font-size: clamp(42px, 8vw, 100px);
+}
+
+.description {
+    font-size: clamp(18px, 2.5vw, 30px);
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    padding-top: clamp(2em, 4vw, 5em);
+    color: #ff6a00;
+    gap: clamp(20px, 4vw, 60px);
+    flex-wrap: wrap;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    font-size: clamp(20px, 3vw, 35px);
+    text-align: center;
+}
+
+.ingredientsList {
+    list-style: none;
+    padding: 0;
+    margin: 2vw 0 0 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 1vw, 16px);
+    max-width: 420px;
+    width: 100%;
+}
+
+.ingredientsList li {
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 0.8vw, 12px);
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    font-weight: 500;
+    padding: clamp(10px, 0.9vw, 14px) clamp(12px, 1vw, 16px);
+    background-color: #f3f3f3;
+    border-radius: 14px;
+    width: max-content;
+    max-width: 100%;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.ingredientsList li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff6a00;
+    flex-shrink: 0;
+}
+
+.checked {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.notes {
+    padding: clamp(1.5em, 4vw, 5em);
+    padding-top: 0;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+}
+
+@media (max-width: 1000px) {
+    .ingredientsList {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .ingredientsList li {
+        width: 100%;
+    }
+
+    .notes {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+@media (max-width: 700px) {
+    .linkAcceuil {
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+    }
+
+    .centerTitre {
+        padding: 0 1em;
+    }
+
+    .icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .notes {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}

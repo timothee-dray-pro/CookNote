@@ -1,0 +1,504 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: clamp(16px, 3vw, 48px);
+    padding-right: clamp(16px, 3vw, 48px);
+    border-bottom: 2px solid #ff6a00;
+    width: 100%;
+    height: clamp(72px, 10vh, 96px);
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 2vw, 2em);
+}
+
+.annulerBouton {
+    border: none;
+    background-color: #ff6a00;
+    color: white;
+    font-size: clamp(14px, 1.2vw, 20px);
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.annulerBouton:hover {
+    background-color: #ce4e0d;
+    transition: 0.2s;
+}
+
+.annulerBouton:active {
+    background-color: #5f2102;
+}
+
+.saveBouton {
+    border: 1px solid #ff6a00;
+    color: #ff6a00;
+    background-color: white;
+    font-size: clamp(14px, 1.2vw, 20px);
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 12px;
+    cursor: pointer;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saveBouton:hover {
+    transition: 0.2s;
+    background-color: rgb(248, 247, 247);
+}
+
+.saveBouton:active {
+    background-color: rgb(240, 240, 240);
+}
+
+.body {
+    padding: calc(clamp(72px, 10vh, 96px) + 2vh) 2em 2em 2em;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.entete {
+    display: flex;
+    gap: clamp(16px, 2vw, 1.5em);
+    padding: clamp(16px, 2vw, 2em);
+    border-bottom: 1px solid rgb(174, 173, 173);
+}
+
+.input {
+    background-color: #f4f2f5;
+    border: 1px solid #e8e2e2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: clamp(220px, 20vw, 360px);
+    height: clamp(220px, 27vh, 360px);
+    border-radius: 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.img {
+    width: clamp(220px, 20vw, 360px);
+    height: clamp(220px, 27vh, 360px);
+    cursor: pointer;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.leftEntente {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    min-width: 0;
+}
+
+.inputTitre {
+    height: clamp(48px, 5vh, 64px);
+    width: 100%;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid #e8e2e2;
+    padding: 0.5em;
+    font-size: clamp(1rem, 1.5vw, 1.5em);
+    box-sizing: border-box;
+}
+
+.inputDescription {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid #e8e2e2;
+    padding: 1em;
+    font-size: clamp(1rem, 1.5vw, 1.5em);
+    font-style: italic;
+    overflow-y: scroll;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.infosRecette {
+    margin-top: 2em;
+    padding-bottom: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    gap: clamp(16px, 2vw, 32px);
+    border-bottom: 1px solid rgb(174, 173, 173);
+    flex-wrap: wrap;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: clamp(140px, 18vw, 220px);
+}
+
+.field p {
+    color: #654031;
+    font-size: clamp(16px, 1.4vw, 21px);
+}
+
+.field input {
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid #e8e2e2;
+    padding: 12px;
+    width: 100%;
+    font-size: clamp(14px, 1.2vw, 18px);
+    box-sizing: border-box;
+}
+
+.field select {
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid #e8e2e2;
+    padding: 12px;
+    width: 100%;
+    font-size: clamp(14px, 1.2vw, 18px);
+    box-sizing: border-box;
+}
+
+.contents {
+    display: flex;
+    gap: clamp(16px, 2vw, 1.5em);
+    margin-top: 2em;
+    padding-bottom: 5em;
+    border-bottom: 1px solid rgb(174, 173, 173);
+}
+
+.content {
+    width: 33%;
+    min-width: 0;
+}
+
+.content button {
+    border: 1px dashed #ff6a00;
+    background-color: #fcf2ed;
+    color: #ff6a00;
+    cursor: pointer;
+    font-size: clamp(14px, 1.2vw, 18px);
+    padding-left: 1em;
+    width: 100%;
+    text-align: left;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 12px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.titre {
+    color: #ff6a00;
+    font-weight: bolder;
+    font-size: clamp(20px, 1.8vw, 25px);
+}
+
+.listeChamp {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.champ {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #e8e2e2;
+    padding: 0.5em 1em 0.5em 1em;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1em;
+    box-sizing: border-box;
+}
+
+.champ p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    min-width: 0;
+}
+
+.champ span {
+    color: white;
+    background-color: #ff6a00;
+    height: clamp(18px, 2vh, 24px);
+    width: clamp(18px, 2vh, 24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    flex-shrink: 0;
+}
+
+.dragHandle {
+    cursor: grab;
+    outline: none;
+    flex-shrink: 0;
+}
+
+.dragHandle:active {
+    cursor: grabbing;
+}
+
+.notes textarea {
+    height: 7em;
+    width: 100%;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid #e8e2e2;
+    padding: 1em;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-style: italic;
+    overflow-y: scroll;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.addIngrOpen {
+    background-color: white;
+    position: fixed;
+    z-index: 3;
+    top: 25vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2em;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: clamp(320px, 25vw, 520px);
+    height: clamp(360px, 50vh, 600px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.addIngrOpen h3 {
+    color: #ff6a00;
+    display: flex;
+    justify-content: center;
+    font-size: clamp(20px, 1.8vw, 25px);
+    margin: 0;
+}
+
+.fieldAdd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.addTitre {
+    font-size: clamp(16px, 1.2vw, 20px);
+    width: 25%;
+}
+
+.addInput {
+    width: 75%;
+    font-size: clamp(16px, 1.2vw, 20px);
+    padding: clamp(10px, 1vw, 15px);
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.addText {
+    background-color: white;
+    position: fixed;
+    z-index: 3;
+    top: 25vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2em;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: clamp(320px, 25vw, 520px);
+    height: clamp(360px, 50vh, 600px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.addText h3 {
+    color: #ff6a00;
+    display: flex;
+    justify-content: center;
+    font-size: clamp(20px, 1.8vw, 25px);
+    margin: 0;
+}
+
+.addText textarea {
+    height: 30vh;
+    width: 100%;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid #e8e2e2;
+    padding: 1em;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-style: italic;
+    overflow-y: scroll;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.rightIcons {
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 1vw, 12px);
+    flex-shrink: 0;
+}
+
+.deleteIcon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deleteIcon:hover {
+    color: #e53935;
+    transition: 0.1s;
+}
+
+@media (max-width: 1200px) {
+    .contents {
+        flex-wrap: wrap;
+    }
+
+    .content {
+        width: calc(50% - 8px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .header {
+        height: auto;
+        min-height: 72px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .header div {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .body {
+        padding: 110px 1em 2em 1em;
+    }
+
+    .entete {
+        flex-direction: column;
+    }
+
+    .input,
+    .img {
+        width: 100%;
+        max-width: 420px;
+        height: clamp(220px, 35vh, 320px);
+    }
+
+    .leftEntente {
+        width: 100%;
+    }
+
+    .contents {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .addIngrOpen,
+    .addText {
+        top: 15vh;
+        width: min(90vw, 520px);
+        height: auto;
+        min-height: 360px;
+    }
+
+    .addText textarea {
+        height: 24vh;
+    }
+
+    .rightHeader {
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        height: auto;
+        min-height: 72px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .rightHeader {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .annulerBouton,
+    .saveBouton {
+        font-size: 14px;
+    }
+
+    .field {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .infosRecette {
+        justify-content: center;
+    }
+
+    .fieldAdd {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .addTitre,
+    .addInput {
+        width: 100%;
+    }
+
+    .addIngrOpen,
+    .addText {
+        padding: 1.25em;
+    }
+}

@@ -1,0 +1,160 @@
+.body {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgb(23, 22, 22);
+    padding: 30px;
+    width: 890px;
+    height: 644px;
+}
+
+@media (max-width:1000px){
+  .body {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgb(23, 22, 22);
+        padding: 30px;
+        width: 480px;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.titre {
+    color: black;
+    font-size: 5em;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+@media (max-width:1000px){
+  .titre {
+        font-size: 50px;
+    }
+}
+
+.close {
+    color: black;
+    background-color: #fff;
+    border: none;
+    font-size: 3em;
+
+    height: 1em;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    background-color: #fff;
+    border: 2px black solid;
+    border-radius: 8px;
+    
+    color: black;
+    font-size: 2em;
+
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    width: 70%;
+
+    outline: none;
+}
+
+@media (max-width:1000px){
+  .input {
+    font-size: 1.5em;
+  }
+}
+
+.bouton {
+    margin-top: 1.5em;
+    background-color: #fd6418;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    height: 3em;
+    width: 75%;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width:1000px){
+  .bouton {
+        margin: 0;
+        background-color: #fd6418;
+        color: white;
+        border: none;
+        border-radius: 40px;
+        height: 3em;
+        width: 75%;
+        font-size: 1.5em;
+        cursor: pointer;
+        margin-top: 60px;
+    }
+}
+
+.bouton:hover {
+    background-color: #ce4e0d;
+    transition: 0.5s;
+}
+
+.bouton:active {
+    background-color: #5f2102;
+}
+
+.connect {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 40px;
+
+    height: 3em;
+    width: 300px;
+
+
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width:1000px){
+  .connect {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    height: 3em;
+    width: 250px;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+}
+
+.connect:hover {
+    background-color: rgb(86, 84, 84);
+    transition: 0.5s;
+}
+
+.connect:active {
+    background-color: rgb(151, 149, 149);
+}
+
+.error {
+    color: red;
+    font-size: 1.6em;
+}

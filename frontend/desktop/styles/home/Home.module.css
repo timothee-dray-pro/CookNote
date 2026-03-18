@@ -1,0 +1,150 @@
+.body {
+    background-color: white;
+    margin: clamp(16px, 3vh, 32px) clamp(16px, 3vw, 48px);
+}
+
+@media (max-width:1000px){
+    .body {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: 20px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(12px, 2vw, 24px);
+}
+
+@media (max-width:1000px){
+    .header {
+        align-items: flex-start;
+    }
+}
+
+.titre {
+    color: #fd6418;
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    margin: 0;
+}
+
+@media (max-width:1000px){
+    .titre {
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
+        width: 50%;
+    }
+}
+
+.filtrer {
+    font-size: clamp(1rem, 2vw, 2em);
+    outline: none;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 1.5vw, 20px);
+}
+
+@media (max-width:1000px){
+    .right {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
+
+.logout {
+    border: none;
+    color: white;
+    background-color: #fd6418;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    padding: clamp(0.8em, 1vw, 1em);
+    border-radius: 20em;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: #ce4e0d;
+    transition: 0.2s;
+}
+
+.logout:active {
+    background-color: #5f2102;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: clamp(20px, 3vw, 40px);
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid #fd6418;
+    padding: 1em;
+    font-size: clamp(1rem, 2vw, 2em);
+    width: 100%;
+    max-width: 35%;
+    outline: none;
+}
+
+@media (max-width:1200px){
+    .input {
+        max-width: 50%;
+    }
+}
+
+@media (max-width:1000px){
+    .input {
+        max-width: 70%;
+    }
+}
+
+.icon {
+    font-size: clamp(1rem, 2vw, 2em);
+    margin-left: -2em;
+    color: black;
+}
+
+.recettes {
+    margin-top: clamp(32px, 5vw, 80px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(16px, 2vw, 28px);
+}
+
+.new_recette {
+    position: fixed;
+    bottom: 4vh;
+    right: 2vw;
+    color: white;
+    background-color: #fd6418;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.4vw, 1.5em);
+    padding: clamp(0.8em, 1vw, 1em);
+    border-radius: 20em;
+}
+
+.new_recette:hover {
+    background-color: #ce4e0d;
+    transition: 0.5s;
+}
+
+.new_recette:active {
+    background-color: #5f2102;
+}
+
+@media (max-width:1000px){
+    .new_recette {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 3vh;
+        white-space: nowrap;
+    }
+}

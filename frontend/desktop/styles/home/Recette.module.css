@@ -1,0 +1,68 @@
+.body {
+    width: clamp(240px, 20vw, 380px);
+    max-width: 100%;
+    max-height: none;
+    box-shadow: 0 0 10px rgb(190, 189, 189);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: transform 0.25s ease;
+    margin: 1em;
+    color: black;
+    text-decoration: none;
+}
+
+.body:hover {
+    transform: scale(1.02);
+}
+
+.bg {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.description {
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: default;
+    gap: 1em;
+}
+
+.icon_right {
+    display: flex;
+    gap: clamp(8px, 1vw, 12px);
+}
+
+.delete {
+    color: black;
+    cursor: pointer;
+}
+
+.delete:hover {
+    color: #e53935;
+    transition: 0.1s;
+}
+
+@media (max-width: 1200px) {
+    .body {
+        width: clamp(220px, 28vw, 320px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .body {
+        width: clamp(220px, 40vw, 300px);
+    }
+}
+
+@media (max-width: 700px) {
+    .body {
+        width: 100%;
+        margin: 0.75em 0;
+    }
+}
