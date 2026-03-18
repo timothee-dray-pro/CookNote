@@ -29,9 +29,7 @@ CookNote permet aux utilisateurs de :
 ## Fonctionnalités
 
 - Authentification utilisateur par token
-- Création de recettes
-- Modification de recettes
-- Suppression de recettes
+- Création, modification et suppression de recettes
 - Gestion dynamique des ingrédients
 - Gestion dynamique des étapes
 - Organisation des éléments par drag and drop
@@ -43,71 +41,71 @@ CookNote permet aux utilisateurs de :
 
 CookNote a été conçu comme un projet full-stack de portfolio avec plusieurs objectifs :
 - Concevoir une application complète de A à Z
-- Travailler la communication entre un frontend et un backend
-- Mettre en place une base de données pour stocker les recettes utilisateurs
-- Développer une interface agréable et simple à utiliser
+- Mettre en place une communication entre frontend et backend
+- Structurer une base de données pour stocker les recettes utilisateurs
+- Développer une interface claire et agréable à utiliser
 - Approfondir la gestion d’état côté client
-- Structurer un projet web réaliste et évolutif
+- Concevoir un projet web réaliste et évolutif
 
 ## Structure du projet
 
 ```
 CookNote/
 ├── backend/
-├── frontend/
+├── frontend/desktop/
 └── README.md
 ```
 
 ## Installation
 
-1. Cloner le projet
+### 1. Cloner le projet
 
 ```
-git clone https://github.com/votre-pseudo/cooknote.git
-cd cooknote
+git clone https://github.com/timothee-dray-pro/CookNote
+cd CookNote
 ```
 
-2. Installer et lancer le backend
+### 2. Installer et lancer le backend
 
 ```
 cd backend
-npm install
-npm run dev
+yarn install
+yarn start
 ```
 
-3. Configurer le backend  
-Créer un fichier `.env` dans `backend` avec :
+### 3. Configurer le backend
 
-```
+Créer un fichier `.env` dans le dossier `backend` :
+
+```env
 CONNECTION_STRING=your_mongodb_connection_string
-PORT=3000
+CLOUDINARY_URL=your_cloudinary_connection_string
 ```
 
-4. Installer et lancer le frontend
+### 4. Installer et lancer le frontend
 
 ```
-cd frontend
-npm install
-npm run dev
+cd frontend/desktop
+yarn install
+yarn dev
 ```
 
-5. Configurer le frontend  
-Créer un fichier `.env.local` dans `frontend` avec :
+### 5. Configurer le frontend
 
-```
+Créer un fichier `.env.local` dans le dossier `frontend/desktop` :
+
+```env
 NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
 
 ## Utilisation
 
 Une fois le projet lancé, l’utilisateur peut :
-- Se connecter ou s’authentifier
-- Ajouter une nouvelle recette
-- Renseigner les ingrédients, quantités et unités
-- Ajouter les étapes de préparation
-- Modifier ou supprimer une recette existante
-- Rechercher rapidement une recette dans la liste disponible
-- Filtrer les recettes selon différents critères
+- Se connecter
+- Ajouter une recette
+- Gérer les ingrédients et les étapes
+- Modifier ou supprimer une recette
+- Rechercher et filtrer des recettes
 
 ## Points travaillés
 
