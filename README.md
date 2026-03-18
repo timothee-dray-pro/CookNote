@@ -60,14 +60,14 @@ CookNote/
 
 ### 1. Cloner le projet
 
-```
-git clone https://github.com/timothee-dray-pro/CookNote
+```bash
+git clone https://github.com/timothee-dray-pro/CookNote.git
 cd CookNote
 ```
 
 ### 2. Installer et lancer le backend
 
-```
+```bash
 cd backend
 yarn install
 yarn start
@@ -84,7 +84,7 @@ CLOUDINARY_URL=your_cloudinary_connection_string
 
 ### 4. Installer et lancer le frontend
 
-```
+```bash
 cd frontend/desktop
 yarn install
 yarn dev
