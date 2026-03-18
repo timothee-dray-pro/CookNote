@@ -51,35 +51,52 @@ CookNote a été conçu comme un projet full-stack de portfolio avec plusieurs o
 
 ## Structure du projet
 
+```
 CookNote/
 ├── backend/
 ├── frontend/
 └── README.md
+```
 
 ## Installation
 
 1. Cloner le projet
+
+```
 git clone https://github.com/votre-pseudo/cooknote.git
 cd cooknote
+```
 
 2. Installer et lancer le backend
+
+```
 cd backend
 npm install
 npm run dev
+```
 
-3. Configurer le backend
-Créer un fichier .env dans backend avec :
+3. Configurer le backend  
+Créer un fichier `.env` dans `backend` avec :
+
+```
 CONNECTION_STRING=your_mongodb_connection_string
 PORT=3000
+```
 
 4. Installer et lancer le frontend
+
+```
 cd frontend
 npm install
 npm run dev
+```
 
-5. Configurer le frontend
-Créer un fichier .env.local dans frontend avec :
+5. Configurer le frontend  
+Créer un fichier `.env.local` dans `frontend` avec :
+
+```
 NEXT_PUBLIC_API_URL=http://localhost:3000
+```
 
 ## Utilisation
 
@@ -101,17 +118,6 @@ Une fois le projet lancé, l’utilisateur peut :
 - Mise en place d’un système d’authentification
 - Création de composants réutilisables
 - Travail sur l’expérience utilisateur et le responsive design
-
-## Évolutions possibles
-
-- Ajout d’images pour chaque recette
-- Système de favoris
-- Amélioration de la sécurité
-- Gestion avancée des profils utilisateurs
-- Déploiement complet
-- Version PWA
-- Partage de recettes
-- Export de fiches recettes
 
 ## Auteur
 
