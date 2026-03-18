@@ -23,6 +23,8 @@ function Signin() {
                 body: JSON.stringify({ email: email, password: password})
             })).json()
 
+            alert(signinResult)
+
             if (signinResult.error === undefined)
             {
                 setErrorMsg("");
